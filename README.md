@@ -79,6 +79,11 @@ python intent_trainer.py
 ```
 
 ---
+## 📸 Screenshot of Chatbot UI
+
+![Chatbot UI](https://user-images.githubusercontent.com/.../your_image.png)
+
+<img width="1700" alt="Image" src="https://github.com/user-attachments/assets/7979d244-313b-4f50-86fb-76bb9904685d" />
 
 ## ▶️ Running the App
 
