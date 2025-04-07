@@ -1,0 +1,5 @@
+input,intent_pass,response_pass,actual_intent,expected_intent,response,f1_entity_score
+Hi there!,False,False,unknown,greeting,I'm not sure I understand. Could you rephrase that or provide more details?,0.0
+What's the weather in Toronto?,True,True,weather,weather,"Checking the weather, Looking at Toronto, I see it's 7°C and scattered clouds. Humidity is 59% with wind speed of 2.57 m/s.",0.25
+How much is a laptop?,False,False,thanks,pricing,You're welcome! Glad I could assist you!,0.0
+Can I book an appointment for tomorrow at 3pm?,True,True,scheduling,scheduling,"About scheduling, We have availability on tomorrow at 3pm. Should I book this for you?",0.44
