@@ -194,7 +194,7 @@ class EnhancedChatbot:
         }
         
         # Weather API configuration
-        self.weather_api_key = "20c8b979eaab1c8afbadc75b18d06f35"  # Replace with your actual OpenWeatherMap API key
+        self.weather_api_key = ""  # Replace with your actual OpenWeatherMap API key
      
     def create_calendar_event(self, date, time, summary="Chatbot Appointment"):
         SCOPES = ['https://www.googleapis.com/auth/calendar']
