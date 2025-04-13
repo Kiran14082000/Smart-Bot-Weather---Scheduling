@@ -14,23 +14,97 @@ import joblib
 # --- TRAIN INTENT CLASSIFIER ---
 
 def load_training_data():
-    # Sample training data extracted from intents
     return [
+        # greeting
         {"text": "Hi there!", "intent": "greeting"},
         {"text": "Hello!", "intent": "greeting"},
         {"text": "Good morning", "intent": "greeting"},
+        {"text": "Hey", "intent": "greeting"},
+        {"text": "Howdy!", "intent": "greeting"},
+
+        # farewell
         {"text": "Bye!", "intent": "farewell"},
         {"text": "See you later", "intent": "farewell"},
+        {"text": "Goodbye", "intent": "farewell"},
+        {"text": "Catch you later", "intent": "farewell"},
+        {"text": "Take care", "intent": "farewell"},
+
+        # thanks
         {"text": "Thanks a lot", "intent": "thanks"},
         {"text": "Thank you!", "intent": "thanks"},
+        {"text": "Appreciate it", "intent": "thanks"},
+        {"text": "Thanks for the help", "intent": "thanks"},
+        {"text": "Much appreciated", "intent": "thanks"},
+
+        # weather
         {"text": "What's the weather in Toronto?", "intent": "weather"},
         {"text": "Will it rain tomorrow?", "intent": "weather"},
+        {"text": "Weather update please", "intent": "weather"},
+        {"text": "Tell me the forecast", "intent": "weather"},
+        {"text": "Temperature in New York?", "intent": "weather"},
+
+        # product_info
+        {"text": "Tell me about your products", "intent": "product_info"},
+        {"text": "What do you sell?", "intent": "product_info"},
+        {"text": "Show me your catalog", "intent": "product_info"},
+        {"text": "What services do you offer?", "intent": "product_info"},
+        {"text": "Product information", "intent": "product_info"},
+
+        # pricing
         {"text": "How much is a laptop?", "intent": "pricing"},
+        {"text": "Price of the phone", "intent": "pricing"},
+        {"text": "What's the cost of the TV?", "intent": "pricing"},
+        {"text": "How much for a jacket?", "intent": "pricing"},
+        {"text": "Subscription pricing?", "intent": "pricing"},
+
+        # scheduling
         {"text": "Book me for tomorrow at 2pm", "intent": "scheduling"},
         {"text": "Can I make an appointment?", "intent": "scheduling"},
+        {"text": "Schedule a call", "intent": "scheduling"},
+        {"text": "I want to book a time", "intent": "scheduling"},
+        {"text": "Reserve a slot", "intent": "scheduling"},
+
+        # order_status
         {"text": "Track order #12345", "intent": "order_status"},
         {"text": "Where is my package?", "intent": "order_status"},
-        {"text": "Help me with my tablet", "intent": "help"}
+        {"text": "Delivery status of my order", "intent": "order_status"},
+        {"text": "Check my order", "intent": "order_status"},
+        {"text": "Order tracking", "intent": "order_status"},
+
+        # news
+        {"text": "What's the news today?", "intent": "news"},
+        {"text": "Latest headlines", "intent": "news"},
+        {"text": "News update please", "intent": "news"},
+        {"text": "Tell me the news", "intent": "news"},
+        {"text": "Show me some news", "intent": "news"},
+
+        # help
+        {"text": "Help me with my tablet", "intent": "help"},
+        {"text": "I need support", "intent": "help"},
+        {"text": "Can you assist me?", "intent": "help"},
+        {"text": "I'm stuck", "intent": "help"},
+        {"text": "Need assistance", "intent": "help"},
+
+        # yes
+        {"text": "Yes", "intent": "yes"},
+        {"text": "Sure", "intent": "yes"},
+        {"text": "Yep", "intent": "yes"},
+        {"text": "Absolutely", "intent": "yes"},
+        {"text": "Go ahead", "intent": "yes"},
+
+        # no
+        {"text": "No", "intent": "no"},
+        {"text": "Not now", "intent": "no"},
+        {"text": "No thanks", "intent": "no"},
+        {"text": "Cancel it", "intent": "no"},
+        {"text": "Nevermind", "intent": "no"},
+
+        # get_user_info
+        {"text": "Do you remember my name?", "intent": "get_user_info"},
+        {"text": "Tell me my name", "intent": "get_user_info"},
+        {"text": "What's my name?", "intent": "get_user_info"},
+        {"text": "Who am I?", "intent": "get_user_info"},
+        {"text": "What did I tell you my name is?", "intent": "get_user_info"}
     ]
 
 
@@ -87,7 +161,7 @@ def evaluate_chatbot(bot, test_cases, export_csv=False):
     predicted_intents = []
     expected_intents = []
 
-    for i, case in enumerate(test_cases):
+    for case in test_cases:
         user_input = case["input"]
         expected_intent = case["expected_intent"]
         expected_phrase = case.get("expected_response_contains", "")

@@ -1,5 +1,28 @@
 input,intent_pass,response_pass,actual_intent,expected_intent,response,f1_entity_score
-Hi there!,False,False,unknown,greeting,I'm not sure I understand. Could you rephrase that or provide more details?,0.0
-What's the weather in Toronto?,True,True,weather,weather,"Checking the weather, Looking at Toronto, I see it's 7°C and scattered clouds. Humidity is 59% with wind speed of 2.57 m/s.",0.25
-How much is a laptop?,False,False,thanks,pricing,You're welcome! Glad I could assist you!,0.0
-Can I book an appointment for tomorrow at 3pm?,True,True,scheduling,scheduling,"About scheduling, We have availability on tomorrow at 3pm. Should I book this for you?",0.44
+Hello there!,True,False,greeting,greeting,Hey!,0.0
+Good morning,True,False,greeting,greeting,Hello! How can I assist you today?,0.0
+Goodbye!,True,False,farewell,farewell,See you later!,0.0
+Catch you later,True,True,farewell,farewell,See you later!,0.0
+Thanks a lot!,True,False,thanks,thanks,Anytime!,0.0
+Appreciate it,True,False,thanks,thanks,Glad I could help!,0.0
+What's the weather in New York?,True,True,weather,weather,"In New York, it's 20°C with cloudy.",0.29
+Is it going to rain in Vancouver?,True,True,weather,weather,"In in Vancouver, it's 20°C with cloudy.",0.0
+What do you sell?,True,False,product_info,product_info,We have a range of electronics. Do you want details on something specific?,0.0
+Tell me about your products,True,False,product_info,product_info,We have a range of electronics. Do you want details on something specific?,0.0
+How much is a tablet?,True,True,pricing,pricing,The price for tablet is $500. Want more info?,0.29
+What's the cost of fiction books?,True,True,pricing,pricing,The price for fiction is $20. Want more info?,0.29
+Schedule a meeting for tomorrow at 10am,True,True,scheduling,scheduling,Scheduled on tomorrow at 10am. Confirm?,0.5
+Can I book an appointment for today at 2pm?,True,True,scheduling,scheduling,Scheduled on today at 2pm. Confirm?,0.5
+"Yes, please go ahead",True,True,yes,yes,Great! Proceeding.,0.0
+"No, not right now",True,True,no,no,No worries. Let me know if you need anything.,0.0
+Track my order #12345,True,True,order_status,order_status,"Order #12345 is shipped. Expected on April 15, 2025.",0.29
+Where is my package?,True,True,order_status,order_status,I couldn't find that order. Can you double-check the number?,0.0
+Help me with my laptop issue,True,False,help,help,I can assist with laptop. Could you elaborate?,0.29
+"I'm stuck, can you assist?",True,True,help,help,I can assist with your issue. Could you elaborate?,0.0
+Do you remember my name?,True,True,get_user_info,get_user_info,Your name is friend.,0.0
+Who am I?,True,True,get_user_info,get_user_info,Your name is friend.,0.0
+Tell me the news today,True,True,news,news,"Top headlines:
+1. AI revolutionizes education.
+2. Tech giants invest in climate solutions.
+3. New breakthroughs in cancer research.",0.0
+What's happening in the world?,False,False,weather,news,"In the world, it's 20°C with cloudy.",0.0
